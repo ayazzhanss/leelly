@@ -1,0 +1,186 @@
+/* Негізгі стильдер */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e3f2fd; /* Ашық көк фон */
+    color: #333333; /* Қара түсті мәтін */
+}
+
+/* Заголовок */
+h2 {
+    color: #ff5722; /* Ашық қызыл */
+    text-align: center;
+    margin: 20px 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Навигация */
+nav {
+    width: 100%;
+    background-color: #4a148c; /* Күлгін */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav h2 {
+    margin: 0;
+    color: #ffffff; /* Ақ */
+}
+
+nav button {
+    color: #fff;
+    background-color: #03a9f4; /* Көк */
+    border: none;
+    font-size: 16px;
+    margin: 0 12px;
+    cursor: pointer;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav button:hover {
+    background-color: #0288d1; /* Қанық көк */
+    transform: scale(1.1);
+}
+
+/* Бет стильдері */
+.page {
+    display: none;
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+}
+
+.active {
+    display: block;
+}
+
+/* Каталог стилдері */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.product {
+    border: 2px solid #4caf50; /* Жасыл */
+    border-radius: 15px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    background-color: #f1f8e9; /* Ашық жасыл */
+    color: #424242;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.product h3 {
+    color: #424242;
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.product p {
+    color: #757575;
+    margin-bottom: 8px;
+}
+
+/* Түйме стильдері */
+button {
+    padding: 10px 20px;
+    background-color: #03a9f4; /* Көк */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0288d1; /* Қанық көк */
+    transform: scale(1.05);
+}
+
+/* Себет және төлем */
+#cart-list {
+    list-style: none;
+    padding: 0;
+    color: #424242;
+}
+
+#cart-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#total-price {
+    font-weight: bold;
+    color: #4caf50; /* Жасыл */
+}
+
+/* Форма элементтері */
+form label {
+    font-size: 14px;
+    color: #424242;
+    margin-top: 10px;
+}
+
+form input[type="text"], form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #4caf50; /* Жасыл */
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f1f1f1; /* Ашық фон */
+    color: #424242;
+}
+
+form input[type="text"]::placeholder,
+form input[type="password"]::placeholder {
+    color: #aaa;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 25px;
+    background-color: #03a9f4; /* Көк */
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0288d1; /* Қанық көк */
+}

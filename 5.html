@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="5.css">
+    <title>LEELY brand</title>
+</head>
+<body>
+    <nav>
+        <h2>LEELY brand</h2>
+        <button onclick="showPage('login')">Кіру</button>
+        <button onclick="showPage('catalog')">Дүкен</button>
+        <button onclick="showPage('cart')">Себет</button>
+        <button onclick="showPage('checkout')">Төлем</button>
+    </nav>
+
+    <div id="login" class="page active">
+        <h2>Аккаунтқа Кіру</h2>
+        <form onsubmit="event.preventDefault(); showPage('catalog');">
+            <label for="username">Пайдаланушы аты</label>
+            <input type="text" id="username" placeholder="Пайдаланушы атын енгізіңіз" required>
+            <label for="password">Құпия сөз</label>
+            <input type="password" id="password" placeholder="Құпия сөзді енгізіңіз" required>
+            <button type="submit">Кіру</button>
+        </form>
+    </div>
+
+    <div id="catalog" class="page">
+        <h2>Дүкен Тауарлары</h2>
+        <div class="products">
+            <div class="product">
+                <img src="product1.jpg" alt="Тауар 1">
+                <h3>Тауар 1</h3>
+                <p>Бағасы: 5000 тг</p>
+                <button onclick="addToCart('Тауар 1', 5000)">Сатып алу</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Тауар 2">
+                <h3>Тауар 2</h3>
+                <p>Бағасы: 7000 тг</p>
+                <button onclick="addToCart('Тауар 2', 7000)">Сатып алу</button>
+            </div>
+            <div class="product">
+                <img src="product3.jpg" alt="Тауар 3">
+                <h3>Тауар 3</h3>
+                <p>Бағасы: 3000 тг</p>
+                <button onclick="addToCart('Тауар 3', 3000)">Сатып алу</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart" class="page">
+        <h2>Себет</h2>
+        <ul id="cart-list"></ul>
+        <p id="total-price">Жалпы: 0 тг</p>
+        <button onclick="showPage('checkout')">Төлем жасау</button>
+    </div>
+
+    <div id="checkout" class="page">
+        <h2>Төлем</h2>
+        <form onsubmit="event.preventDefault(); alert('Төлем жасалды!'); showPage('catalog');">
+            <label for="card-number">Карта нөмірі</label>
+            <input type="text" id="card-number" placeholder="Карта нөмірін енгізіңіз" required>
+            <label for="expiry-date">Соңғы мерзімі</label>
+            <input type="text" id="expiry-date" placeholder="ММ/ЖЖ" required>
+            <label for="cvc">CVC коды</label>
+            <input type="text" id="cvc" placeholder="CVC кодын енгізіңіз" required>
+            <button type="submit">Төлем жасау</button>
+        </form>
+    </div>
+
+    <script src="5.js"></script>
+</body>
+</html>
