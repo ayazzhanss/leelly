@@ -9,21 +9,29 @@
 <body>
     <nav>
         <h2>LEELY brand</h2>
-        <button onclick="showPage('login')">Кіру</button>
-        <button onclick="showPage('catalog')">Дүкен</button>
-        <button onclick="showPage('cart')">Себет</button>
-        <button onclick="showPage('checkout')">Төлем</button>
+        <button data-key="login" onclick="showPage('login')">Кіру</button>
+        <button data-key="catalog" onclick="showPage('catalog')">Дүкен</button>
+        <button data-key="cart" onclick="showPage('cart')">Себет</button>
+        <button data-key="checkout" onclick="showPage('checkout')">Төлем</button>
+
+        <div id="language-selector">
+            <button onclick="setLanguage('kk')">Қазақша</button>
+            <button onclick="setLanguage('ru')">Русский</button>
+            <button onclick="setLanguage('en')">English</button>
+        </div>
     </nav>
+    
 
     <div id="login" class="page active">
-        <h2>Аккаунтқа Кіру</h2>
+        <h2 data-key="loginHeader">Аккаунтқа Кіру</h2>
         <form onsubmit="event.preventDefault(); showPage('catalog');">
-            <label for="username">Пайдаланушы аты</label>
+            <label for="username" data-key="username">Пайдаланушы аты</label>
             <input type="text" id="username" placeholder="Пайдаланушы атын енгізіңіз" required>
-            <label for="password">Құпия сөз</label>
+            <label for="password" data-key="password">Құпия сөз</label>
             <input type="password" id="password" placeholder="Құпия сөзді енгізіңіз" required>
-            <button type="submit">Кіру</button>
+            <button type="submit" data-key="loginButton">Кіру</button>
         </form>
+        
     </div>
 
     <div id="catalog" class="page">
