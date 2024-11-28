@@ -25,3 +25,57 @@ function updateCart() {
     });
     document.getElementById('total-price').textContent = Жалпы; $;{totalPrice} тг;
 }
+
+function setLanguage(lang) {
+    const elements = document.querySelectorAll("[data-key]");
+
+    elements.forEach((element) => {
+        const key = element.getAttribute("data-key");
+        if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
+    // Тілді жергілікті сақтау
+    localStorage.setItem("selectedLanguage", lang);
+}
+
+// Сайт ашылғанда сақталған тілді жүктеу
+window.addEventListener("DOMContentLoaded", () => {
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "kk";
+    setLanguage(savedLanguage);
+});
+
+
+const translations = {
+    kk: {
+        loginHeader: "Аккаунтқа Кіру",
+        login: "Кіру",
+        catalog: "Дүкен",
+        cart: "Себет",
+        checkout: "Төлем",
+        username: "Пайдаланушы аты",
+        password: "Құпия сөз",
+        loginButton: "Кіру",
+    },
+    ru: {
+        loginHeader: "Вход в аккаунт",
+        login: "Войти",
+        catalog: "Магазин",
+        cart: "Корзина",
+        checkout: "Оплата",
+        username: "Имя пользователя",
+        password: "Пароль",
+        loginButton: "Войти",
+    },
+    en: {
+        loginHeader: "Account Login",
+        login: "Login",
+        catalog: "Store",
+        cart: "Cart",
+        checkout: "Checkout",
+        username: "Username",
+        password: "Password",
+        loginButton: "Login",
+    },
+};
