@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leely Store</title>
+    <link rel="stylesheet" href="leelly.css">
+    <script src="leelly.js" defer></script>
+</head>
+<body>
+    <!-- Хэдер -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Leely Store">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#slider">Басты бет</a></li>
+                <li><a href="#shop-collections">Топтамалар</a></li>
+                <li><a href="#seasonal-collections">Мезгіл топтамалары</a></li>
+                <li><a href="#about">Біз туралы</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+        <button class="login-btn" onclick="openCart()">Себет</button>
+        <button class="login-btn" onclick="openAuthModal()">Кіру</button>
+    </header>
+
+<!-- Слайдер -->
+<div id="slider">
+    <div class="slide">
+        <img src="images/sale.png" alt="50% жеңілдік тек бүгін!">
+        <h2>50% жеңілдік тек бүгін!</h2>
+    </div>
+    <div class="slide" style="display: none;">
+        <img src="images/new.png" alt="Жаңа коллекция: Әйелдер киімі">
+        <h2>Жаңа коллекция: Әйелдер киімі</h2>
+    </div>
+    <!-- <div class="slide">
+        <img src="images/news.jpg" alt="Тренд жаңалықтар">
+        <h2>Тренд жаңалықтар</h2>
+    </div> -->
+</div>
+
+
+    
+
+    <!-- Дүкеннің топтамалары -->
+    <section id="shop-collections">
+        <div class="container">
+            <h2>Топтамалар</h2>
+            
+            <div class="collection-categories">
+                <div class="category">
+                    <h3>Көйлектер</h3>
+                    <img src="dress.png" alt="Көйлек" class="category-image">
+                    <p>Әртүрлі стильдер мен модельдердегі көйлектер.</p>
+                    <a href="collection-dresses.html">Көру</a>
+                </div>
+                <div class="category">
+                    <h3>Шалбар</h3>
+                    <img src="pant.png" alt="Шалбар" class="category-image">
+                    <p>Стильді және ыңғайлы шалбарлар.</p>
+                    <a href="collection-pants.html">Көру</a>
+                </div>
+                <div class="category">
+                    <h3>Жейде</h3>
+                    <img src="shirt.png" alt="Жейде" class="category-image">
+                    <p>Заманауи және классикалық жейделер.</p>
+                    <a href="collection-shirts.html">Көру</a>
+                </div>
+                <div class="category">
+                    <h3>Футболка</h3>
+                    <img src="t-shirt.png" alt="Футболка" class="category-image">
+                    <p>Күнделікті киюге арналған футболкалар.</p>
+                    <a href="collection-t-shirts.html">Көру</a>
+                </div>
+                <div class="category">
+                    <h3>Сандали</h3>
+                    <img src="sandals.png" alt="Сандали" class="category-image">
+                    <p>Жазғы сандали мен аяқ киімдер.</p>
+                    <a href="collection-sandals.html">Көру</a>
+                </div>
+                <div class="category">
+                    <h3>Кроссовки</h3>
+                    <img src="sneakers.png" alt="Кроссовки" class="category-image">
+                    <p>Жеңіл және ыңғайлы кроссовкилер.</p>
+                    <a href="collection-sneakers.html">Көру</a>
+                </div>
+                <div class="category">
+                    <h3>Туфли</h3>
+                    <img src="heels.png" alt="Туфли" class="category-image">
+                    <p>Элегантты туфлилер мен аяқ киімдер.</p>
+                    <a href="collection-heels.html">Көру</a>
+                </div>
+                <div class="category">
+                    <h3>Двойкалар</h3>
+                    <img src="double.png" alt="Двойка" class="category-image">
+                    <p>Әртүрлі стильдердегі стильді двойкалар.</p>
+                    <a href="collection-doubles.html">Көру</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    
+
+<!-- Жыл мезгіліне байланысты топтамалар -->
+<section id="seasonal-collections">
+    <div class="container">
+        <h2>жыл мезгіліне байланысты топтамалар</h2>
+        <div class="seasonal-categories">
+            <div class="season-category">
+                <h3>Жаз</h3>
+                <img src="summer-collection.png" alt="Жазғы топтама" class="season-image">
+                <p>Жазғы киімдер мен аксессуарлар, ыстық күндерге арналған.</p>
+                <a href="summer-collection.html">Көру</a> <!-- <a href="#summer-collection.html"> түзетілді -->
+            </div>
+            <div class="season-category">
+                <h3>Күз</h3>
+                <img src="autumn-collection.png" alt="Күзгі топтама" class="season-image">
+                <p>Күзге арналған жылы және стильді киімдер.</p>
+                <a href="autumn-collection.html">Көру</a> <!-- <a href="#autumn-collection.html"> түзетілді -->
+            </div>
+            <div class="season-category">
+                <h3>Қыс</h3>
+                <img src="winter-collection.png" alt="Қысқы топтама" class="season-image">
+                <p>Қысқа арналған жылы киімдер мен аяқ киімдер.</p>
+                <a href="winter-collection.html">Көру</a> <!-- <a href="#winter-collection.html"> түзетілді -->
+            </div>
+            <div class="season-category">
+                <h3>Көктем</h3>
+                <img src="spring-collection.png" alt="Көктемгі топтама" class="season-image">
+                <p>Көктемнің алғашқы күндеріне арналған киімдер.</p>
+                <a href="spring-collection.html">Көру</a> <!-- <a href="#spring-collection.html"> түзетілді -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Біз туралы -->
+    <section id="about">
+        <h2>Біз туралы</h2>
+        <p>Leely дүкені сіз үшін ең сапалы, заманауи және сәнді әйелдер киімдерін ұсынады. Біз өзіміздің коллекцияларымызда тек қана жоғары сапалы маталар мен талғампаз дизайндары бар киімдерге назар аударамыз. Әрбір модель заманауи трендтерге сәйкес келеді және әртүрлі стильдер мен қажеттіліктерге сай келеді.
+
+            Сіз үшін арнайы таңдалған киімдеріміздің ішінде – күнделікті киімдерден бастап, кешкі киімдер мен мерекелік киімдерге дейінгі барлық түрлерін таба аласыз. Біз әр әйелдің өзін-өзі сенімді сезінуі үшін қолайлы, ыңғайлы және әдемі киімдерді ұсынамыз.
+            
+            Leely-дің басты мақсаты – әр клиентке өзіне үйлесетін стильді киімді тауып беру, кез келген жағдайға лайықты киім таңдауда көмек көрсету. Сіздің талғамыңыз бен қажеттіліктеріңізді ескере отырып, біздің кең ассортиментіміз сізге ерекше әсер қалдырады.
+            
+            Leely – сіздің жеке стиліңізді табатын орын. </p>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact">
+        <h2>Бізге хабарласыңыз</h2>
+        <p>Email: leelystore@gmail.com</p>
+        <p>Телефон: +7 777 123 4567</p>
+        <p>Мекенжай: Алматы қаласы, Масанчи 78а</p>
+
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/leely_brand/?igsh=MWMyaXc5ZGloY24wdw%3D%3D#">Instagram</a>
+            <a href="#">Facebook</a>
+        </div>
+    </section>
+
+
+<!-- Пікірлер бөлімі -->
+<section id="comments">
+    <div class="container">
+        <h2>Пікірлер</h2>
+        
+        <!-- Пікір қосу формасы -->
+        <form id="comment-form" class="comment-form">
+            <label for="comment-text">Сіздің пікіріңіз:</label>
+            <textarea id="comment-text" placeholder="Өз пікіріңізді қалдырыңыз..." required></textarea>
+            <button type="submit">Жіберу</button>
+        </form>
+
+        <!-- Пікірлер тізімі -->
+        <div id="comments-list">
+            <h3>Пікірлер тізімі:</h3>
+            <div id="comments">
+                <!-- Пікірлер карталар түрінде осы жерде көрсетіледі -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Авторизация модалы -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <h3>Авторизация</h3>
+            <div id="login-form">
+                <input type="text" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Құпиясөз" required>
+                <button onclick="login()">Кіру</button>
+                <p>Жаңа пайдаланушы ма? <a href="#" onclick="toggleAuthForms()">Тіркелу</a></p>
+            </div>
+            <div id="register-form" style="display: none;">
+                <input type="text" id="register-name" placeholder="Аты" required>
+                <input type="email" id="register-email" placeholder="Email" required>
+                <input type="password" id="register-password" placeholder="Құпиясөз" required>
+                <button onclick="register()">Тіркелу</button>
+                <p>Бұрын тіркелдіңіз бе? <a href="#" onclick="toggleAuthForms()">Кіру</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Себет -->
+    
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <h3>Себет</h3>
+            <ul id="cart-items"></ul>
+            <button onclick="checkout()">Төлем жасау</button>
+        </div>
+    </div>
+
+<!-- Себет модалы -->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <h3>Себет</h3>
+        <ul id="cart-items"></ul>
+        <button onclick="checkout()">Төлем жасау</button>
+        <button onclick="closeCart()">Жабу</button>
+    </div>
+</div>
+
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Leely Store. Барлық құқықтар қорғалған.</p>
+    </footer>
+</body>
+</html>
