@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Қысқы Топтама | Дүкен</title>
+    <link rel="stylesheet" href="leelly.css">
+</head>
+<body>
+    <header>
+        <h1>Қысқы Топтама</h1>
+        <p>Қысқа арналған жылы киімдер мен аяқ киімдер.</p>
+    </header>
+
+    <section id="products">
+        <!-- Здесь будут динамически добавляться товары -->
+    </section>
+
+    <footer>
+        <a href="leelly.html">Басты бетке оралу</a>
+    </footer>
+
+    <script>
+        // Данные о футболках
+        const winter = [
+            { name: 'Fendi', image: 'images/winter-collection1.webp', price: 27000 },
+            { name: 'Valentino', image: 'images/winter-collection2.webp', price: 25500 },
+            { name: 'Heresis', image: 'images/winter-collection3.jpg', price: 30000 }
+        ];
+
+        // Функция для отображения товаров
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Функция добавления товара в корзину
+        function addToCart(name, price) {
+            // Добавляем товар в массив корзины
+            cart.push({ name, price });
+            // Сохраняем корзину в localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Уведомление об успешном добавлении
+            alert(`${name} бағасы ${price} тг себетке қосылды!`);
+
+            // Лог корзины (для отладки)
+            console.log("Текущая корзина:", cart);
+        }
+
+        // Функция для отображения товаров
+        function displayProducts(category) {
+            const productsContainer = document.getElementById('products');
+            productsContainer.innerHTML = ''; // Очищаем контейнер
+
+            category.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.classList.add('product-card');
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>${product.price} тг</p>
+                    <button onclick="addToCart('${product.name}', ${product.price})">Себетке қосу</button>
+                `;
+                productsContainer.appendChild(productCard);
+            });
+        }
+        // Отображаем футболки
+        displayProducts(winter);
+    </script>
+</body>
+</html>
